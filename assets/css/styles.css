@@ -1,0 +1,461 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/* 1 Từ ngoài vào trong, Từ trái sang phải  
+2 từ Trên xuống dưới
+3 Từ Tổng quan đến chi tiết */
+
+/* 
+1.Vị trí
+2.Màu Sắc
+3.Kiểu dáng (kiểu chữ,hình tròn,vuông)
+4.Kích Thước(wight,hight)
+*/
+    /* common */
+    /* row là hàng */
+.row{
+   
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.con-2 {
+    padding: 32px 0;
+}
+
+
+.mg-l {
+    margin-left: 10px;
+}
+
+
+/* colum cột */
+.col {
+    float: left;
+    padding:  32px 0;     
+}
+
+.mt-16 {
+    margin: 16px 0 ;
+}
+
+.ml-full {
+    width: 414px;
+}
+
+.w-col {
+    width: 201px !important;
+}
+
+/* can giua */
+.text-center {
+    text-align: center  !important;
+}
+/* kich thuoc 3 cot */
+
+.col-half {
+    width: 50% ;
+    float: left;
+    
+}
+
+.col-full {
+    width: 100%;
+    
+}
+
+.col-three {
+    width: 33.3333%;
+}
+
+.text-while {
+    color: #fff !important;
+}
+
+#main {
+
+}
+
+#header {
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+
+/* display ở thẻ nav là làm cho thẻ có tính chất khối */
+
+#nav {
+    display: inline-block;
+}
+
+/* thuộc tính list */
+#nav, .subnav {
+    list-style-type: none;
+}
+
+#nav li {
+    display: inline-block;
+    position: relative;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .subnav li a {
+    color: #000;
+    min-width: 160px;
+    height: 38px;
+    padding: 0 16px;
+}
+
+#nav .subnav li:hover a,
+#nav > li:hover > a {
+    color: #000 ;
+    background-color: #ccc;
+}
+
+/* chuyển thành dạng văn bản in hoa  */
+#nav > li > a  {
+    text-transform: uppercase;
+    color: #fff ;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display:block ;
+}
+/* icon seach */
+#nav .nav-arrow-down {
+    font-size: 15px;
+    
+}
+
+/* box shadow thuộc tính bóng đổ */
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#nav .subnav li {
+    display: block;
+}
+
+/* begin  search */
+#header .search-bth {
+    color: #fff;
+    float: right;
+    line-height: 46px;
+    padding: 0px 23px;
+}
+/* cursor : pointer là thuộc tính hiển thị con chuột */
+#header .search-bth:hover  {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+/* end search */
+
+/* begin slider */
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/img/slider/slider1.jpg') center / contain no-repeat; 
+    position: relative;
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 33px 0; 
+    color: #fff;
+}
+
+#slider .text-heading {
+    margin: 25px 0;
+}
+
+#slider .text-description {
+
+}
+
+/* end slider */
+
+/* content */
+/* margin top left auto là dính sang trái sang phải  */
+#content  .content-section{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .content-section {
+    padding: 64px 0 ;
+    
+}
+/* text-align :center là thuộc tính căn giữa văn bản */
+#content .section-heading {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-weight: 400px;
+    padding: 5px 0;
+}
+/* italic là thuộc tính chữ nghiêng
+opacity là thuộc tính độ đậm mờ của chữ max là 1.0 (tức 100% độ đậm) */
+
+#content .section-sub-heading {
+    text-align: center;
+    margin: 15px 0;
+    font-style: italic;
+    opacity: 0.6;
+    padding: 2px 0;
+}
+/* justify là thuộc tính căn văn bản thành hàng dọc 
+line height ở đây là thuộc tính căn chữ 
+english đặt 1.4
+vietnames đặt 1.6 */
+#content .about-text {
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: justify;
+} 
+/* end content */
+
+/* begin team */
+
+
+
+
+
+
+#content .member-name {
+    
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+#content .member-avt {
+    width: 154px;
+    border-radius: 4px;
+}
+
+/* end begin */
+
+/* begin tour */
+
+.tour-section {
+    background: #000;
+}
+
+.tour-section .content-section .tikers-list {
+    margin-top: 30px;
+}
+
+.tour-section  .tikers-list  {
+    background-color: #fff;
+    list-style: none;
+    font-size: 15px;
+   
+}
+
+.tikers-list li {
+    color: #757575;
+    padding: 10px 17px;
+    border: 1px solid #ddd;
+}
+
+.tour-section .slod-out {
+    background-color: #f44336;
+    margin: 22px;
+    padding: 2px 7px;
+}
+
+
+.tikers-list .tiker-number {
+    border-radius: 50%;
+    padding: 3px 8px;
+    margin-top: -3px;
+    margin-right: 14px;
+    float: right;
+    color: #fff;
+    background: #000;
+}
+
+/* place */
+
+
+
+
+.place-img {
+    width: 100%;
+    padding: 0 8px;
+    display: block;
+}
+
+.place-img:hover {
+   opacity: 0.80;
+}
+
+.point-name {
+    color: #000;
+    background-color: #fff;
+    padding: 0 16px;
+    margin: 0 8px;
+}
+
+.place-name {
+    padding: 15px 0;
+    font-weight: 600;
+}
+
+.place-time {
+    padding: 15px 0;
+    opacity: 0.60;
+}
+
+.place-content {
+    padding: 15px 0;
+    line-height: 1.5;
+}
+
+.place-but-buy {
+    padding: 10px 13px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.place-but-buy:hover  {
+    color: #000;
+    background-color: #ccc;
+}
+
+
+/* end place */
+
+
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info p i {
+    width: 30px;
+    
+}
+
+.contact-from {
+    font-size: 15px;
+   
+}
+
+
+.contact-from .font-control {
+    padding: 11px 6px;
+    border: 1px solid #ccc;
+    outline: none;
+ 
+}
+
+.contact-from .font-con {
+   
+    margin-left: 6px;
+    
+}
+
+.contact-from .font-full {
+    
+    width: 414px;
+}
+
+.contact-from .col-message {
+    margin-top: 8px;
+}
+
+.contact-from .form-send-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 11px 17px;
+    float: right;
+}
+
+/* Đổi chuột = cursor:pointer */
+
+.contact-from .form-send-btn:hover{
+    cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+}
+
+.mapsection img {
+    width: 100%;
+}
+
+#footer {
+    padding: 64px 0;
+    text-align: center;
+}
+
+#footer .soure-seciton {
+    margin: 15px 0;
+}
+
+#footer .sosial {
+    font-size: 24px;
+}
+
+
+#footer .sosial i {
+    color: rgba(0,0,0,0.5);
+}
+
+#footer .sosial i:hover {
+   opacity: 0.60;
+}
+
+#footer .copyright {
+    color: rgba(0,0,0,0.5);
+} 
+
+#footer .copyright a {
+    color: rgba(0,0,0,0.5);
+}
+
+/* CẢm ơn :)) */
